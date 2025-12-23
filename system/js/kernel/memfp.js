@@ -12,13 +12,13 @@ class MemoryFootprint {
 
     /**
      * Gets the memory footprint of the specified source code.
-     * @param {string} src An ES6 source code snippet.
+     * @param {string} rawCode The raw ES6 source code.
      */
-    static getVirtualFootprint(src) {
+    static getVirtualFootprint(rawCode) {
         let cost = 0;
 
-        for (let i = 0; i < src.length; i++) {
-            cost += CHAR_COSTS[src[i]] ?? 1;
+        for (let i = 0; i < rawCode.length; i++) {
+            cost += CHAR_COSTS[rawCode[i]] ?? 1;
         }
 
         return cost;

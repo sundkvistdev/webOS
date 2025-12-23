@@ -39,6 +39,10 @@ class ProcessManager {
             throw "PROCMAN:PROCESS_OVERFLOW";
 
         return this._nextPid++;
-    } 
+    }
+
+    endProcess(pid, params) {
+
+    }
 
 }
